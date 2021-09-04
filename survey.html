@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="description" content="Internet Programming Experiment No:01">
+  <meta name="author" content="Lester Rodrigues TE CMPN B Roll No: 18">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>survey-form</title>
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+  <link rel="stylesheet" href="survey.css" />
+
+</head>
+
+<body>
+
+  <div class="navbar">
+    <a href="index.html">Internet Programming</a>
+    <a href="index.html">Home</a>
+
+  </div>
+
+
+  <div id="outside">
+    <form id="survey-form" action="/my-handling-form-page" method="post">
+      <h1 id="title">Welcome to Internet Programming class</h1>
+      <p id="description">
+        This survey is for the faculty to know you and your level of understanding
+        before taking the course. <br><b>Please note:</b>Responses will be confidential<br />
+
+      </p>
+
+      <!-- ------------------Personal Details---------------------------- -->
+      <fieldset>
+        <legend>Personal Details</legend>
+
+        <div>
+          <label id="name-label" for="name">Name:</label>
+          <input type="text" required id="name" name="user_name" placeholder="Enter name here" />
+           
+          <label for="address-label">Address:</label>
+          <input type="Address" id="address" name="Address" placeholder="Enter address here" />
+           
+          <label id="email-label" for="Email">Email:</label>
+          <input type="email" required id="email" name="user_email" placeholder="Enter email here" />
+           
+
+
+          <label id="number-label" for="phone">PID:</label>
+          <input type="number" id="number" name="user_name" placeholder="Enter 05 digit number" min="0" max="199999" /> 
+          <label id="RollNo-label" for="iq">Roll No:</label>
+          <input type="number" id="RollNo" name="RollNo" placeholder="Enter Roll No here" min="1" max="80" />
+          <label for="tele">WhatsApp No:</label>
+          <input type="tel" id="phone" name="phone" placeholder="+91-0123-456-678"
+            pattern="+[0-9]{2}-[0-9]{4}-[0-9]{3}-[0-9]{3}" required><br><br>
+        </div>
+
+        <!-- ------------------Radio Buttons-------------------------------- -->
+        <div>
+          <label for="Gender">Gender
+            <p>
+              <input type="radio" name="gender" value="male" checked /> Male
+              <input type="radio" name="gender" value="female" /> Female
+              <input type="radio" name="gender" value="other" /> Other
+            </p>
+          </label>
+        </div>
+        <div align="center">
+          <label for="date-label">Date of Birth:</label>
+          <input type="date" name="bday" />
+        </div>
+      </fieldset>
+
+
+      <!-- ------------------Checkboxes-------------------------------- -->
+      <fieldset>
+        <legend>Behaviour Declaration</legend>
+        <label for="Gender">Check All That Apply :)</label>
+        <p>
+
+          <input type="checkbox" name="honest" value="honest" /> I complete all my homework with little or no
+          plagarism.<br />
+          <input type="checkbox" name="respect" value="respect" /> I am respectful towards my classmates and my teachers
+          <br />
+          <input type="checkbox" name="participate" value="participate" /> I take active participation in the
+          class<br />
+          <input type="checkbox" name="work" value="work" checked /> I will not be a trouble maker <br />
+          <input type="checkbox" name="doubts" value="doubts" checked /> I will make it a point to have my doubts
+          cleared <br />
+          <input type="checkbox" name="loc" value="loc" checked />I will arrange appropriate apparatus for online
+          lectures<br />
+        </p>
+      </fieldset>
+
+
+
+
+
+      <!-- -----------------Dropdown menus--------------------------------- -->
+
+      <fieldset>
+        <legend>What do you feel about yourself ?</legend>
+        <div align="center">
+          <label for="Familiartiy">I am a </label>
+          <select id="dropdown">
+            <option value="Newbie">Newbie</option>
+            <option value="Beginer">Beginer</option>
+            <option value="Intermediate">Intermediate</option>
+            <option value="Pro Level">Pro Level</option>
+          </select>
+
+          <label for="politics">Doing Web Development since</label>
+          <select id="dropdown2">
+            <option value="University">University</option>
+            <option value="College">College</option>
+            <option value="Secondary">High School</option>
+            <option value="None">None</option>
+          </select>
+        </div>
+      </fieldset>
+
+
+      <fieldset>
+        <legend>Course Familiarity ?</legend>
+
+        <div>
+          <p><b>Note:</b>1 means least familiar and 5 means most familiar</p>
+          <list>
+            <ul>
+              <li>Have u worked with any frameworks ?</li>
+
+              <input type="radio" id="no" name="framework" value="01"><label for="no">01</label>
+              <input type="radio" id="medium" name="framework" value="02"><label for="medium">02</label>
+              <input type="radio" id="extreme" name="framework" value="03"><label for="03">03</label>
+
+              <li> Have you heard about Backend?</li>
+              <input type="radio" id="no2" name="Backend" value="01" checked /> <label for="no2">1</label>
+              <input type="radio" id="medium2" name="Backend" value="02" /> <label for="medium2">2</label>
+              <input type="radio" id="extreme2" name="Backend" value="03" /> <label for="extreme2">3</label>
+
+              <li>How familiar are you with working on web development projects?</li>
+              <input type="radio" id="no3" name="dev" value="01" checked /> <label for="no3">1</label>
+              <input type="radio" id="medium3" name="dev" value="02" /> <label for="medium3">2</label>
+              <input type="radio" id="extreme3" name="dev" value="03" /> <label for="extreme3">3</label>
+
+
+
+            </ul>
+          </list>
+      </fieldset>
+
+
+
+      <!-- --------------------Text Areas------------------------------ -->
+
+      <fieldset>
+        <legend>Tell me more about you :</legend>
+        <div align="center">
+          <label for="msg"></label>
+          <p>In 50 words or more explain your expectations from the faculty and the course</p>
+          <textarea id="msg" name="user_message" rows="4" cols="2000" placeholder="Enter Here"></textarea>
+           
+        </div>
+        <div align="center">
+          <label for="msg">Please mention your career objective after taking this course</label><br />
+          <textarea id="msg2" name="user_message" rows="4" cols="50" placeholder="Enter Here"></textarea>
+           
+        </div>
+        <div align="center">
+          <p>
+            Upload Your certificates Here: <br>
+
+            <button>Attach Files</button>
+          </p>
+        </div>
+      </fieldset>
+
+      <fieldset>
+
+        <legend>A note to my students:</legend>
+        <p align="center"> Look Buddy as a faculty I may fail at times too.But what matters is willingless to learn.
+          Lets make it a frutiful course for both of us<br>
+        <P align="center"><input type="checkbox" name="end" value="end" />I am ready to give my 100%. Lets do it</p>
+
+      </fieldset>
+      <div id="submitbutton">
+        <button type="submit" id="submit">Submit Here Buddy</button>  
+      </div>
+    </form>
+  </div>
+</body>
+
+<footer>
+  <p align="center" id="footer"><a href="survey.html">Made with &hearts; by Lester Rodrigues TE CMPN B Roll No 18</a>
+  </p>
+</footer>
+
+</html>
